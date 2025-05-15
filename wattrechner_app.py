@@ -42,3 +42,5 @@ P_gesamt = P_luft + P_roll + P_hoehe
 st.markdown("---")
 st.metric("Gesamtleistung", f"{P_gesamt:.1f} Watt")
 st.caption("Berechnet aus Luft-, Roll- und Steigungswiderstand.")
+st.latex(r"P_{\text{gesamt}} = \frac{1}{2} \cdot \rho \cdot C_wA \cdot v^3 + m \cdot g \cdot C_{rr} \cdot v + \frac{m \cdot g \cdot h}{t}")
+st.latex(f"P_{{\\text{{gesamt}}}} = \\frac{{1}}{2} \\cdot {rho} \\cdot {cwA} \\cdot ({v:.2f})^3 + {gewicht} \\cdot {g} \\cdot {c_rr} \\cdot ({v:.2f}) + \\frac{{{gewicht} \\cdot {g} \\cdot {hoehe}}}{{{zeit_s:.2f}}} = {P_gesamt:.1f}~\\text{{Watt}}")
